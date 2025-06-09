@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="视频简介"
+            android:text="@string/video_description"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -28,7 +28,7 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发布时间"
+            android:text="@string/release_date"
             android:id="@+id/video_update_time"
             android:layout_marginRight="8dp"
             android:textSize="16dp"
@@ -53,10 +53,10 @@
         android:contextClickable="true"
         android:background="@color/backgroundGray">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dialog_black_list_video_desc"
-            android:text="test"
+            android:text="@string/test"
             android:maxHeight="160dp"
             android:textColorHighlight="@color/tab_text_normal"
             android:textIsSelectable="true"
@@ -79,7 +79,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="屏蔽选项"
+        android:text="@string/block_options"
         android:textColor="@color/cardBlack"
         android:layout_marginLeft="8dp"
         android:textSize="16dp"
@@ -109,7 +109,7 @@
         android:id="@+id/dialog_black_list_add_tag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我不想再看到含有选中tag的视频"
+        android:text="@string/dont_want_to_see_videos_with_selected_tags"
         android:background="@color/cardWhite"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp"
@@ -118,7 +118,7 @@
         android:id="@+id/dialog_black_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我不想再看到这个视频"
+        android:text="@string/dont_want_to_see_this_video"
         android:background="@color/cardWhite"
         android:layout_marginBottom="8dp"
         />
@@ -126,7 +126,7 @@
         android:id="@+id/dialog_black_list_add_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我不想再看到这个up主"
+        android:text="@string/dont_want_to_see_this_up"
         android:background="@color/cardWhite"
         android:layout_marginBottom="8dp"
         />

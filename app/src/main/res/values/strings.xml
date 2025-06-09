@@ -10,4 +10,13 @@
     <string name="tab_bottom_1">视频</string>
     <string name="tab_bottom_2">枝网查重</string>
     <string name="tab_bottom_3">暂时没活</string>
+
+
+    <string name="dont_want_to_see_this_up">我不想再看到这个up主</string>
+    <string name="dont_want_to_see_this_video">我不想再看到这个视频</string>
+    <string name="dont_want_to_see_videos_with_selected_tags">我不想再看到含有选中tag的视频</string>
+    <string name="test">test</string>
+    <string name="release_date">发布时间</string>
+    <string name="video_description">视频简介</string>
+    <string name="block_options">屏蔽选项</string>
 </resources>
