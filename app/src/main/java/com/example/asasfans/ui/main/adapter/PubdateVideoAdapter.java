@@ -31,13 +31,13 @@ import com.example.asasfans.data.VideoDataStoragedInMemory;
 import com.google.android.flexbox.FlexboxLayout;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.orhanobut.dialogplus.DialogPlus;
-import com.orhanobut.dialogplus.OnClickListener;
 import com.orhanobut.dialogplus.ViewHolder;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -96,14 +96,14 @@ public class PubdateVideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
     public static String[] tagFormat(String tag){
         return tag.replace("\'", "").replace(" ", "").split(",");
     }
-    public static String stampToDate(String s) {
+    public static String stampToDatetime(String s) {
         if(s.length() == 10){
             s=s+"000";
         }
         String res;
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         //如果它本来就是long类型的,则不用写这一步
-        long lt = new Long(s);
+        long lt = Long.valueOf(s);
 //        Date date = new Date(lt * 1000);
         Date date = new Date(lt );
         res = simpleDateFormat.format(date);
@@ -126,7 +126,7 @@ public class PubdateVideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
                 TextView videoUpdateTime = dialogView.findViewById(R.id.video_update_time);
                 TextView dialog_black_list_video_desc = dialogView.findViewById(R.id.dialog_black_list_video_desc);
 
-                videoUpdateTime.setText(stampToDate(String.valueOf(resultBeans.get(videoViewHolder.getBindingAdapterPosition()).getPubdate())));
+                videoUpdateTime.setText(stampToDatetime(String.valueOf(resultBeans.get(videoViewHolder.getBindingAdapterPosition()).getPubdate())));
                 dialog_black_list_video_desc.setText(resultBeans.get(videoViewHolder.getBindingAdapterPosition()).getDesc());
 
                 flexboxLayout.removeAllViews();
@@ -288,7 +288,7 @@ public class PubdateVideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
                 TextView videoUpdateTime = dialogView.findViewById(R.id.video_update_time);
                 TextView dialog_black_list_video_desc = dialogView.findViewById(R.id.dialog_black_list_video_desc);
 
-                videoUpdateTime.setText(stampToDate(String.valueOf(resultBeans.get(videoViewHolder.getBindingAdapterPosition()).getPubdate())));
+                videoUpdateTime.setText(stampToDatetime(String.valueOf(resultBeans.get(videoViewHolder.getBindingAdapterPosition()).getPubdate())));
                 dialog_black_list_video_desc.setText(resultBeans.get(videoViewHolder.getBindingAdapterPosition()).getDesc());
 
                 flexboxLayout.removeAllViews();
@@ -546,12 +546,9 @@ public class PubdateVideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
         int m=(seconds%3600)/60;		//分钟
         int s=(seconds%3600)%60;		//秒
         if(h>0){
-            return h + ":" + m +":" + s;
+            return String.format(Locale.CHINA, "%02d:%02d:%02d", h, m, s);
         }
-        if(m>0){
-            return m + ":" + s;
-        }
-        return "00:" + s;
+        return String.format(Locale.CHINA, "%02d:%02d", m, s);
     }
 
     /**
@@ -565,7 +562,7 @@ public class PubdateVideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
         if ((viewNum - 10000) < 0){
             return viewNum + "";
         }else {
-            return viewNum/10000 +"万";
+            return Math.round(viewNum/10000.0) +"万";
         }
     }
 }

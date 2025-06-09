@@ -176,8 +176,8 @@ public class AdvancedSearchOptionFragment extends Fragment {
         if (!AdvancedSearchActivity.pubdateQ.get(0).equals("0")){
             Log.i("startTime", String.valueOf(AdvancedSearchActivity.pubdateQ.get(0)));
             Log.i("endTime", String.valueOf(AdvancedSearchActivity.pubdateQ.get(1)));
-            start_time_pick.setText(PubdateVideoAdapter.stampToDate(AdvancedSearchActivity.pubdateQ.get(0)));
-            end_time_pick.setText(PubdateVideoAdapter.stampToDate(AdvancedSearchActivity.pubdateQ.get(1)));
+            start_time_pick.setText(PubdateVideoAdapter.stampToDatetime(AdvancedSearchActivity.pubdateQ.get(0)));
+            end_time_pick.setText(PubdateVideoAdapter.stampToDatetime(AdvancedSearchActivity.pubdateQ.get(1)));
         }
     }
 
