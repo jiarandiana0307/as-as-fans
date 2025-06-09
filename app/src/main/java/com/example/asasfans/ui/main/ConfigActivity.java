@@ -62,7 +62,7 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
     private TextView config_check_version_number;
     private SwitchButton config_floating_ball_switch;
     private View emptyView;
-    private String latestVersion = "https://api.github.com/repos/A-SoulFan/as-as-fans/releases/latest";
+    private String latestVersion = "https://api.github.com/repos/jiarandiana0307/as-as-fans/releases/latest";
     private RotateAnimation mRotateAnimation;
     private Handler mHandler = new Handler();
 
@@ -173,7 +173,7 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.config_contract_us:
                 Intent intentContractUs = new Intent();
                 intentContractUs.setAction("android.intent.action.VIEW");
-                Uri content_url = Uri.parse("https://git.asf.ink/A-SoulFan/as-as-fans/issues");
+                Uri content_url = Uri.parse("https://github.com/jiarandiana0307/as-as-fans/issues");
                 intentContractUs.setData(content_url);
                 startActivity(intentContractUs);
                 break;
@@ -243,7 +243,7 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
                         confirm.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.asf.ink/"));
+                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://asoulfan.netlify.app"));
                                 startActivity(intent);
                                 dialog.dismiss();
                             }
@@ -260,7 +260,7 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 }else {
                     Toast.makeText(ConfigActivity.this, "403，请手动对比当前与最新版本号", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://app.asf.ink/"));
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://asoulfan.netlify.app"));
                     startActivity(intent);
                 }
             }else {

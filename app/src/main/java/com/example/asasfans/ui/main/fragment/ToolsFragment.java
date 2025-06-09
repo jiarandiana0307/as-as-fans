@@ -90,7 +90,7 @@ public class ToolsFragment extends Fragment {
                     public void onClick(View view) {
                         Intent intentContractUs = new Intent();
                         intentContractUs.setAction("android.intent.action.VIEW");
-                        Uri content_url = Uri.parse("https://app.asf.ink/");
+                        Uri content_url = Uri.parse("https://asoulfan.netlify.app/");
                         intentContractUs.setData(content_url);
                         startActivity(intentContractUs);
                         dialog.dismiss();
