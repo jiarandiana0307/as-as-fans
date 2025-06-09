@@ -95,18 +95,18 @@ dependencies {
     //更好的spinner
     implementation('com.github.arcadefire:nice-spinner:1.4.4')
     //更好的radiobutton
-    implementation('com.zaaach:tabradiobutton:1.0.2')
+    implementation('com.github.zaaach:TabRadioButton:1.0.2')
     //ios风日期选择器
     implementation('com.contrarywind:Android-PickerView:4.1.9')
     //悬浮球
 //    implementation 'com.alonsol:floatserver:1.0.0'
     //修改了这个悬浮球的源码，本地导入的
-    compile(name:'floatserver-debug', ext:'aar')
+    implementation(name:'floatserver-debug', ext:'aar')
 //    compile(name:'tbs_sdk_thirdapp_v4.3.0.281_44181_sharewithdownloadwithfile_withoutGame_obfs_20220407_152305', ext:'jar')
 
     implementation 'com.kyleduo.switchbutton:library:2.1.0'
 
-    compile 'com.danikula:videocache:2.7.1'
+    implementation 'com.danikula:videocache:2.7.1'
 
 //    implementation 'com.github.JeffMony:VideoDownloader:5.8.0'
 //    implementation 'com.github.JeffMony:MediaSDK:2.0.0'
