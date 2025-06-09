@@ -110,9 +110,9 @@ public class AdvancedSearchDataBean {
              */
 
             private String bvid;
-            private int aid;
+            private long aid;
             private String name;
-            private int mid;
+            private long mid;
             private String face;
             private int tid;
             private String tname;
@@ -140,11 +140,11 @@ public class AdvancedSearchDataBean {
                 this.bvid = bvid;
             }
 
-            public int getAid() {
+            public long getAid() {
                 return aid;
             }
 
-            public void setAid(int aid) {
+            public void setAid(long aid) {
                 this.aid = aid;
             }
 
@@ -156,11 +156,11 @@ public class AdvancedSearchDataBean {
                 this.name = name;
             }
 
-            public int getMid() {
+            public long getMid() {
                 return mid;
             }
 
-            public void setMid(int mid) {
+            public void setMid(long mid) {
                 this.mid = mid;
             }
 

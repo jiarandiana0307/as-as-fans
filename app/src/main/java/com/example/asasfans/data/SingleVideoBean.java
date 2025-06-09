@@ -86,7 +86,7 @@ public class SingleVideoBean {
          */
 
         private String bvid;
-        private int aid;
+        private long aid;
         private int videos;
         private int tid;
         private String tname;
@@ -122,11 +122,11 @@ public class SingleVideoBean {
             this.bvid = bvid;
         }
 
-        public int getAid() {
+        public long getAid() {
             return aid;
         }
 
-        public void setAid(int aid) {
+        public void setAid(long aid) {
             this.aid = aid;
         }
 
@@ -511,15 +511,15 @@ public class SingleVideoBean {
              * face : http://i2.hdslb.com/bfs/face/6e3b84c1fe71caf523ed87d264f9026013af1c2c.jpg
              */
 
-            private int mid;
+            private long mid;
             private String name;
             private String face;
 
-            public int getMid() {
+            public long getMid() {
                 return mid;
             }
 
-            public void setMid(int mid) {
+            public void setMid(long mid) {
                 this.mid = mid;
             }
 
@@ -557,7 +557,7 @@ public class SingleVideoBean {
              * argue_msg :
              */
 
-            private int aid;
+            private long aid;
             private int view;
             private int danmaku;
             private int reply;
@@ -571,11 +571,11 @@ public class SingleVideoBean {
             private String evaluation;
             private String argue_msg;
 
-            public int getAid() {
+            public long getAid() {
                 return aid;
             }
 
-            public void setAid(int aid) {
+            public void setAid(long aid) {
                 this.aid = aid;
             }
 
@@ -756,7 +756,7 @@ public class SingleVideoBean {
             private int id;
             private String title;
             private String cover;
-            private int mid;
+            private long mid;
             private String intro;
             private int sign_state;
             private int attribute;
@@ -789,11 +789,11 @@ public class SingleVideoBean {
                 this.cover = cover;
             }
 
-            public int getMid() {
+            public long getMid() {
                 return mid;
             }
 
-            public void setMid(int mid) {
+            public void setMid(long mid) {
                 this.mid = mid;
             }
 
@@ -1031,7 +1031,7 @@ public class SingleVideoBean {
                     private int season_id;
                     private int section_id;
                     private int id;
-                    private int aid;
+                    private long aid;
                     private int cid;
                     private String title;
                     private int attribute;
@@ -1063,11 +1063,11 @@ public class SingleVideoBean {
                         this.id = id;
                     }
 
-                    public int getAid() {
+                    public long getAid() {
                         return aid;
                     }
 
-                    public void setAid(int aid) {
+                    public void setAid(long aid) {
                         this.aid = aid;
                     }
 
@@ -1141,7 +1141,7 @@ public class SingleVideoBean {
                          * desc_v2 : null
                          */
 
-                        private int aid;
+                        private long aid;
                         private int videos;
                         private int type_id;
                         private String type_name;
@@ -1160,11 +1160,11 @@ public class SingleVideoBean {
                         private DimensionBeanX dimension;
                         private Object desc_v2;
 
-                        public int getAid() {
+                        public long getAid() {
                             return aid;
                         }
 
-                        public void setAid(int aid) {
+                        public void setAid(long aid) {
                             this.aid = aid;
                         }
 
@@ -1427,15 +1427,15 @@ public class SingleVideoBean {
                              * face :
                              */
 
-                            private int mid;
+                            private long mid;
                             private String name;
                             private String face;
 
-                            public int getMid() {
+                            public long getMid() {
                                 return mid;
                             }
 
-                            public void setMid(int mid) {
+                            public void setMid(long mid) {
                                 this.mid = mid;
                             }
 
@@ -1473,7 +1473,7 @@ public class SingleVideoBean {
                              * argue_msg :
                              */
 
-                            private int aid;
+                            private long aid;
                             private int view;
                             private int danmaku;
                             private int reply;
@@ -1487,11 +1487,11 @@ public class SingleVideoBean {
                             private String evaluation;
                             private String argue_msg;
 
-                            public int getAid() {
+                            public long getAid() {
                                 return aid;
                             }
 
-                            public void setAid(int aid) {
+                            public void setAid(long aid) {
                                 this.aid = aid;
                             }
 
