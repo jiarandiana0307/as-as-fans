@@ -73,7 +73,7 @@ public class WebFragment extends Fragment {
     public WebView webView;
     private ProgressBar progressBar;
     private long exitTime = 0;
-    private String url = "https://asoulcnki.asia/";
+    private String url = "https://asoulcnki.cbu.net/";
     private static final int REQUEST_CODE_FILE_CHOOSER = 1;
 
     private ValueCallback<Uri> mUploadCallbackForLowApi;
@@ -178,6 +178,9 @@ public class WebFragment extends Fragment {
         webView.getSettings().setDatabaseEnabled(true);
 
         WebSettings webSettings = webView.getSettings();
+        if (url.startsWith("https://zjsongs.netlify.app")) {
+            webSettings.setUserAgentString("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36");
+        }
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);//设置js可以直接打开窗口，如window.open()，默认为false
         webSettings.setJavaScriptEnabled(true);//是否允许JavaScript脚本运行，默认为false。设置true时，会提醒可能造成XSS漏洞
         webSettings.setSupportZoom(true);//是否可以缩放，默认true
@@ -187,6 +190,8 @@ public class WebFragment extends Fragment {
         webSettings.setDomStorageEnabled(true);//开启本地DOM存储
         webSettings.setLoadsImagesAutomatically(true); // 加载图片
         webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
 //        webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 //        webSettings.setMixedContentMode(WebSettings.);
 

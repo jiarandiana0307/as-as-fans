@@ -8,7 +8,7 @@ import java.util.List;
  * @description api配置
  */
 public class ApiConfig {
-    private static final String BASE_URL = "https://api.asasfans.asf.ink/v2";
+    private static final String BASE_URL = "https://asoulfan.cbu.net/v2";
     private static final String PATH_VIDEO = "/asoul-video-interface/advanced-search?";
 
     private int page;
