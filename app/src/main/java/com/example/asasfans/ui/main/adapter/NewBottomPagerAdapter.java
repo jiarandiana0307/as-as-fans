@@ -35,7 +35,7 @@ public class NewBottomPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return ImageFanArtFragment.newInstance();
             case 2:
-                return WebFragment.newInstance("https://zjsongs.netlify.app", true);
+                return WebFragment.newInstance("https://studio.asoul.us.kg", true);
             case 3:
                 return NewToolsFragment.newInstance();
             default:

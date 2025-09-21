@@ -29,11 +29,11 @@ public class ToolsAdapter extends RecyclerView.Adapter<ToolsAdapter.ToolsViewHol
     private final int CHECK_MAX_LIMIT = 3;
     public static final List<String> iconUrl
             = Arrays.asList(
-                            "https://asoulcnki.cbu.net",
+                            "https://cnki.asoul.us.kg",
                             "https://tools.asoulfan.com/zhijiangDict",
                             "https://asoul.icu/",
                             "https://asoul.asia/",
-                            "https://asoulwiki.netlify.app/",
+                            "https://wiki.asoul.us.kg/",
                             "http://asoul.infedg.xyz/",
 
                             "https://nf.asoul-rec.com",

@@ -63,23 +63,25 @@ public class NewToolsFragment extends Fragment {
     private Handler mHandler = new Handler();
 
     private List<String> tipList = Arrays.asList(
-            "ZIMU:能在线查看ASOUL所有录播的时间轴，五人的服饰，出场的场景；有字幕库，能在线搜索AS成员在直播中说过的每一句话，以及出自于哪场录播的几分几秒；内置切片工具，能精准的只下载一整场录播需要的那一小部分",
-            //"录音棚:收录A-SOUL几乎全部Solo以及合唱歌曲，并可在线播放并缓存，有搜索及标签筛选功能，手机端电脑端皆可使用",
+            "ZIMU：能在线查看ASOUL所有录播的时间轴，五人的服饰，出场的场景；有字幕库，能在线搜索AS成员在直播中说过的每一句话，以及出自于哪场录播的几分几秒；内置切片工具，能精准的只下载一整场录播需要的那一小部分",
+            "录音棚：收录A-SOUL几乎全部Solo以及合唱歌曲，并可在线播放并缓存，有搜索及标签筛选功能，手机端电脑端皆可使用",
             //"AU都在溜:A-SOUL相关投稿播放排行，展示了B站ASOUL相关视频在线观看人数前百的稿件",
 //            "二创搜图:A-SOUL二创图片原动态出处搜索",
-            "tips:性能问题，有些web第一次加载会很慢，出现ERR_TIMED_OUT请尝试刷新或右上角浏览器打开哦",
+            "tips：性能问题，有些web第一次加载会很慢，出现ERR_TIMED_OUT请尝试刷新或右上角浏览器打开哦",
             //"直播搜图:能根据一张图片，在线搜索到这张图片是出自于哪场录播的几分几秒",
-            "枝网查重:提供ASoul评论区小作文查重、检索功能。还有其他小工具：粉丝编号释义(对应的小行星编号)，枝网年度报告，阿草的太极教室(模拟和羊驼私信)等。枝网，用了都说好！另外还为开发者提供查重和OAuth接口。",
-            "魂维基:这里记录了最详细的关于虚拟偶像团体A-SOUL及其相关的内容！",
-            "小作文展:收集AU小作文的网站，有直接搜索和标签筛选功能",
-            "方言词典:收录A-SOUL直播及二创产生的衍生梗或偷来的梗，可以进行方便的检索，方便新来的AU快速了解AU话术！",
-            "诈骗链接:将B站的视频长链接转换为b23.tv的短链接，但是短链接的有效期为1年，1年后短链接会失效",
+            "枝网查重：提供ASoul评论区小作文查重、检索功能。还有其他小工具：粉丝编号释义(对应的小行星编号)，枝网年度报告，阿草的太极教室(模拟和羊驼私信)等。枝网，用了都说好！另外还为开发者提供查重和OAuth接口。",
+            "魂维基：这里记录了最详细的关于虚拟偶像团体A-SOUL及其相关的内容！",
+            "小作文展：收集AU小作文的网站，有直接搜索和标签筛选功能",
+            "方言词典：收录A-SOUL直播及二创产生的衍生梗或偷来的梗，可以进行方便的检索，方便新来的AU快速了解AU话术！",
+            "诈骗链接：将B站的视频长链接转换为b23.tv的短链接，但是短链接的有效期为1年，1年后短链接会失效",
             //"聊天公示:随时能实时查看各大论坛的管理群的聊天记录, 还有能查看五人粉丝量变化",
             //"AS抖音:A-SOUL 抖音视频 All in one ！展示了ASOUL所有抖音视频投稿",
             //"嘉然音声:收录了嘉然的各种各样的萌萌的声音的按钮站，点击按钮就能发出声音",
             //"向晚音声:收录了向晚的各种各样的萌萌的声音的按钮站，点击按钮就能发出声音",
             //"作文生成:使用GPT-2模型训练的小作文生成器，可以根据你的输入自动补(feng)写(he)出生草的小作文。（提示：输入越长越有意义补全效果越好）",
-            "录播站:在OneDrive，GoogleDrive，百度云盘，阿里云盘，夸克云盘内存放了：ASOUL出道到现在所有的原画录播和配套弹幕及字幕库；录播的音频流文件；4K超分辨率的直播切片；出道到现在唱过的所有歌的MP3歌曲切片；能带弹幕在线观看高码率ASOUL录播"
+            "录播站：在OneDrive，GoogleDrive，百度云盘，阿里云盘，夸克云盘内存放了：ASOUL出道到现在所有的原画录播和配套弹幕及字幕库；录播的音频流文件；4K超分辨率的直播切片；出道到现在唱过的所有歌的MP3歌曲切片；能带弹幕在线观看高码率ASOUL录播",
+            "AICU：B站查评论、查成分工具",
+            "VTBs：B站虚拟主播宏观数据统计网站"
     );
 
     public static NewToolsFragment newInstance() {
@@ -225,11 +227,13 @@ public class NewToolsFragment extends Fragment {
 
     private void initWebInfo(){
         webInfos.clear();
-        webInfos.add(new WebInfo("https://asoulcnki.cbu.net", "icon_zwcc", "枝网查重", "枝网查重"));
-        webInfos.add(new WebInfo("https://asoulbook.netlify.app", "icon_zhijiang_book", "方言词典", "方言词典"));
-        webInfos.add(new WebInfo("https://asoulcnki.cbu.net/rank", "icon_zwcc", "小作文展", "小作文展"));
+        webInfos.add(new WebInfo("https://cnki.asoul.us.kg", "icon_zwcc", "枝网查重", "枝网查重"));
+        webInfos.add(new WebInfo("https://nav.asoul.us.kg", "icon_asoul_nav", "A-SOUL导航", "AS导航"));
+        webInfos.add(new WebInfo("https://studio.asoul.us.kg", "icon_asoul_studio", "A-SOUL录音棚", "AS录音棚"));
+        webInfos.add(new WebInfo("https://book.asoul.us.kg", "icon_zhijiang_book", "方言词典", "方言词典"));
+        webInfos.add(new WebInfo("https://cnki.asoul.us.kg/rank", "icon_zwcc", "小作文展", "小作文展"));
         //webInfos.add(new WebInfo("https://asoul.asia/", "icon_asoul", "管理群聊天记录公示", "聊天公示"));
-        webInfos.add(new WebInfo("https://asoulwiki.netlify.app/", "icon_asoul", "一个魂维基", "魂维基"));
+        webInfos.add(new WebInfo("https://wiki.asoul.us.kg/", "icon_asoul", "一个魂维基", "魂维基"));
         //webInfos.add(new WebInfo("http://asoul.infedg.xyz/", "icon_asoul", "小作文生成器", "作文生成"));
         webInfos.add(new WebInfo("https://nf.asoul-rec.com", "icon_nf_asoul_rec", "A-SOUL原画录播站", "录播站"));
         //webInfos.add(new WebInfo("https://tools.asoulfan.com/ingredientChecking", "icon_asf_bak", "成分姬", "成分姬"));
@@ -243,6 +247,8 @@ public class NewToolsFragment extends Fragment {
         //webInfos.add(new WebInfo("https://livedb.asoulfan.com/PhotoSearch/index.html", "icon_asoul", "A-Soul 直播图片搜索", "直播搜图"));
         //webInfos.add(new WebInfo("https://online.asoulfan.com/", "icon_asoul", "AU都在溜什么？", "AU都在溜"));
         webInfos.add(new WebInfo("https://zimu.live/", "icon_zimu", "二创切片的有力助手", "字幕库"));
+        webInfos.add(new WebInfo("https://aicu.cc", "icon_aicu", "查B站评论工具", "AICU"));
+        webInfos.add(new WebInfo("https://vtbs.moe", "icon_vtbs", "B站虚拟主播数据统计", "VTBs"));
     }
 
     public void updateFragment(int index){

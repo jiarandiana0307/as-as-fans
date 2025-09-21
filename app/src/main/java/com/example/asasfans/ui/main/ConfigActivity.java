@@ -243,7 +243,7 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
                         confirm.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://asoulfan.netlify.app"));
+                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fan.asoul.us.kg"));
                                 startActivity(intent);
                                 dialog.dismiss();
                             }
@@ -260,7 +260,7 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
                     }
                 }else {
                     Toast.makeText(ConfigActivity.this, "403，请手动对比当前与最新版本号", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://asoulfan.netlify.app"));
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://fan.asoul.us.kg"));
                     startActivity(intent);
                 }
             }else {
