@@ -562,7 +562,7 @@ public class PubdateVideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
         if ((viewNum - 10000) < 0){
             return viewNum + "";
         }else {
-            return Math.round(viewNum/10000.0) +"万";
+            return String.format(Locale.CHINA, "%.1f万", viewNum / 10000.0);
         }
     }
 }
